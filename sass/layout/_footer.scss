@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts/" as *;
+
+.footer{
+    background-color: $gray;
+    padding-top: 25px;
+    &__container{
+        color: $white;
+        margin-left: 25px;
+        margin-right: 25px;
+
+        @include breakpoint(xl){
+            width: 1400px;
+        }
+
+        &-header{
+            @include breakpoint(xl){
+                display: flex;
+            }
+        }
+    }
+
+}

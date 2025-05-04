@@ -1,0 +1,50 @@
+@use "../abstracts/" as *;
+
+.header {
+    &__container-header{
+        text-align: center;
+        @include breakpoint(md) {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+
+    }
+
+    &__logo {
+        
+        img{
+            width: 140px;
+            @include breakpoint(md){
+                min-width: 178px;
+                min-height: 32px;
+                }
+        }
+
+        @include breakpoint(lg){
+            margin-bottom: 35px;
+        }
+
+        @include breakpoint(xl){
+            margin-bottom: 45px;
+        }
+    }
+
+    &__principalNav {
+        
+        ul {
+        padding: 0;
+        display: flex;
+        list-style: none;
+        gap: 25px; 
+        
+
+        @include breakpoint(md){
+            margin: 0;
+            margin-right: 10px;
+            gap: 32px;
+        }
+        }
+    }
+}

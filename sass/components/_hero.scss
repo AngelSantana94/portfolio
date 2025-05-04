@@ -1,0 +1,230 @@
+@use "../abstracts/" as *;
+
+.header{
+    &__hero {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 70px;
+        
+
+        @include breakpoint(md) {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-right: -4%;
+        }
+
+
+        
+        &-img {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+            width: 190px;
+            img{
+                max-width: 100%;
+                z-index: 2;
+
+                @include breakpoint(lg) {
+                    width: 330px;
+                }
+
+                @include breakpoint(xl){
+                    width: 380px;
+                }
+            }
+
+            @include breakpoint(md){
+                position: absolute;
+                min-width: 330px ;
+                right: -0.5%;
+                top: -1%
+                
+            }
+
+            @include breakpoint(lg){
+                right: 0.4%;
+                width: 370px;
+                top: -16px;
+            }
+
+            @include breakpoint(xl){
+                width: 400px;
+                right: 1.5%;
+            }
+
+        }
+    
+        &-degradado-bg{
+            position: absolute;
+            background: linear-gradient(to top, rgba(30, 30, 30, 0.8), transparent);
+            width: 190px;
+            height: 400px;
+            top: -16%;
+
+            @include breakpoint(md){
+                background-color: $gray;
+                z-index: -1;
+                min-width: 328px;
+                min-height: 600px;
+                right: -0.5%;
+                top: -26%;
+            }
+
+            @include breakpoint(lg) {
+                width: 335px;
+                right: 2.3%;
+            }
+
+            @include breakpoint(xl){
+                width: 380px ;
+            }
+        }
+    
+        &-vector-izquierda{
+            position: absolute;
+            left: -90%;
+            img{
+                width: 450px;
+                @include breakpoint(md){
+                    width: 380px;
+                    z-index: -2;
+                }
+
+            }
+
+            @include breakpoint(md){
+                left: -20%;
+                top: 1%;
+            }
+
+            @include breakpoint(lg) {
+                left: -20%;
+                top: 2%;
+            }
+
+            @include breakpoint(xl){
+                left: -15%;
+            }
+        }
+    
+        &-vector-derecha{
+            position: absolute;
+            left: 88%;
+            top: 29%;
+            img{
+                width:125px ;
+            }
+
+            @include breakpoint(md){
+                z-index: 4;
+                left: 90%;
+                top: 74%;
+            }
+
+            @include breakpoint(lg){
+                left: 52%;
+                top: 71%;
+            }
+
+            @include breakpoint(xl){
+                left: 63%;
+                top: 70%;
+            }
+
+
+        }
+
+        &-description{
+            color:$white;
+            margin-bottom: 5px;
+            text-align: center;
+
+            @include breakpoint(md){
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                width: 455px;
+            }
+
+            @include breakpoint(lg) {
+                width: 690px;
+            }
+
+            @include breakpoint(xl){
+                width: 800px;
+            }
+            h1{ 
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 40px;
+                letter-spacing: -1.14px;
+
+                @include breakpoint(md){
+                    font-weight: 700;
+                    font-size: 73px;
+                    line-height: 83px;
+                    letter-spacing: -2.05px;
+                    text-align: left;
+                }
+
+                @include breakpoint(lg){
+                    font-size: 68px;
+                }
+
+                @include breakpoint(xl){
+                    font-size: 90px;
+                    line-height: 88px;
+                }
+                .line-break {
+                    @include breakpoint(md) {
+                        display: block;
+                    }
+
+                    @include breakpoint(lg){
+                        display: inline;
+                    }
+                }
+
+
+    
+                .underline{
+                    border-bottom: 4px solid $green;
+                    display: inline-block;
+                    line-height: 1; 
+                    padding-bottom: 1px;
+                }
+            }
+    
+            p {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 26px;
+                letter-spacing: 0;
+
+                @include breakpoint(md){
+                width: 450px;
+                margin-top: 10px;
+                text-align: left;
+                font-weight: 500;
+                font-size: 18px;
+
+                }
+
+                @include breakpoint(xl){
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    
+        &-button{
+            @include button;
+        }
+    }
+}

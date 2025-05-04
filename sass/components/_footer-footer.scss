@@ -1,0 +1,50 @@
+@use "../abstracts/" as *;
+
+.footer{
+    overflow: hidden;
+    &__footer{
+        display: flex;
+        flex-direction: column ;
+        align-items: center;
+        padding-bottom: 35px;
+        
+
+        @include breakpoint(md){
+            border-top: 2px solid $white;
+            padding-top: 25px;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        &-img{
+            max-width: 130px;
+
+            @include breakpoint(md){
+                min-width: 175px;
+            }
+        }
+
+        &-nav{
+            
+            ul{
+                display: flex;
+                align-items: center;
+                gap: 25px;
+                list-style: none;
+                padding: 0;
+
+                @include breakpoint(md){
+                    gap: 30px;
+                }
+                a {
+                    &:hover{
+                        filter: brightness(0) saturate(100%) invert(64%) sepia(61%) saturate(364%) hue-rotate(87deg) brightness(89%) contrast(87%);
+                    }
+                }
+
+            }
+        }
+    }
+}
